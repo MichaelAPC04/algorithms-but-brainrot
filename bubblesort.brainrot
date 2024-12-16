@@ -1,0 +1,31 @@
+/**
+* Brainrot programming language (as denoted by the .brainrot file extension) bubble sort algorithm. Note that arrays and increment operators do not work.
+* This file will be updated to accomodate these issues.
+**/
+
+skibidi swap(rizz* arr, rizz i, rizz j){
+    rizz temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+}
+
+skibidi bubbleSort(rizz arr[], rizz n){
+    flex(rizz i = 0; i < n - 1; i++){
+        flex(rizz j = 0; j < n - i - 1; j++){
+            edging(arr[j] > arr[j + 1])
+                swap(arr, j, j + 1);
+        }
+    }
+}
+
+rizz main(){
+    rizz arr[] = {7, 21, 8, 0, 1};
+    rizz n = maxxing(arr) / maxxing(arr[0]);
+    bubbleSort(arr, n);
+
+    flex(rizz i = 0; i < n; i++){
+        yapping("%d ", arr[i]);
+    }
+
+    bussin 0;
+}
