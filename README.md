@@ -1,2 +1,5 @@
 # algorithms-but-brainrot
-This repository contains various well known programming algorithms but written in the "brainrot" programming language.
+
+## 1. Bubble Sort
+
+This algorithm is the first entry in this repository, it is to be changed, as the .brainrot programming language **does not support arrays or the increment/ decrement operators**. 
