@@ -3,46 +3,28 @@
 * This file will be updated to accomodate these issues.
 **/
 
-grimace rizz NUM_BITS = 5;
-grimace rizz MASK = (1 << NUM_BITS) - 1;
-
-rizz getElement(giga rizz arr, rizz idx) {
-    bussin (arr >> (idx * NUM_BITS)) & MASK;
+skibidi swap(rizz* arr, rizz i, rizz j){
+    rizz temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
 }
 
-giga rizz setElement(giga rizz arr, rizz idx, rizz value) {
-    arr &= ~(MASK << (idx * NUM_BITS));
-    arr |= ((value & MASK) << (idx * NUM_BITS));
-    bussin arr;
-}
-
-giga rizz swap(giga rizz arr, rizz i, rizz j) {
-    rizz elemI = getElement(arr, i);
-    rizz elemJ = getElement(arr, j);
-    arr = setElement(arr, i, elemJ);
-    arr = setElement(arr, j, elemI);
-    bussin arr;
-}
-
-giga rizz bubbleSort(giga rizz arr, rizz n) {
-    flex(rizz i = 0; i < n - 1; i = i + 1) {
-        flex(rizz j = 0; j < n - i - 1; j = j + 1) {
-            edging(getElement(arr, j) > getElement(arr, j + 1)) {
-                arr = swap(arr, j, j + 1);
-            }
+skibidi bubbleSort(rizz arr[], rizz n){
+    flex(rizz i = 0; i < n - 1; i++){
+        flex(rizz j = 0; j < n - i - 1; j++){
+            edging(arr[j] > arr[j + 1])
+                swap(arr, j, j + 1);
         }
     }
-    bussin arr;
 }
 
-rizz main() {
-    giga rizz arr = 0x02A31;
-    rizz n = 5;
+rizz main(){
+    rizz arr[] = {7, 21, 8, 0, 1};
+    rizz n = maxxing(arr) / maxxing(arr[0]);
+    bubbleSort(arr, n);
 
-    arr = bubbleSort(arr, n);
-
-    flex(rizz i = 0; i < n; i = i + 1) {
-        yapping("%d ", getElement(arr, i));
+    flex(rizz i = 0; i < n; i++){
+        yapping("%d ", arr[i]);
     }
 
     bussin 0;
